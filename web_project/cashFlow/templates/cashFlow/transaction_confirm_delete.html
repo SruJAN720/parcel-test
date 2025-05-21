@@ -1,0 +1,7 @@
+<h2>Delete Transaction</h2>
+<p>Are you sure you want to delete transaction {{ transaction.order_id }}?</p>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Yes, Delete</button>
+  <a href="{% url 'transaction_list' %}">Cancel</a>
+</form>
